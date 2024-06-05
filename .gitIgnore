@@ -6,4 +6,4 @@
 /build
 
 # env
-.env
+config.bat
