@@ -6,6 +6,7 @@ import http from "http";
 import compression from "compression";
 import mongoose from "mongoose";
 import env from "dotenv";
+import router from "./router";
 
 env.config();
 
@@ -34,3 +35,5 @@ mongoose.connect(MONGO_URL);
 mongoose.connection.on("error", (error: Error) =>
   console.log("Connection Error", error)
 );
+
+app.use("/", router());
