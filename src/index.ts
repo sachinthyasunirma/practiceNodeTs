@@ -5,6 +5,9 @@ import cors from "cors";
 import http from "http";
 import compression from "compression";
 import mongoose from "mongoose";
+import env from "dotenv";
+
+env.config();
 
 const app = express();
 
